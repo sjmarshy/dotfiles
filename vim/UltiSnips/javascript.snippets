@@ -1,0 +1,95 @@
+snippet q "reqire" b
+var ${1:item} = require("$2");
+endsnippet
+
+snippet f "anonymous function" i
+function ($1) {
+	$2
+}$3
+
+endsnippet
+
+snippet rst "mcfly store skeleton" b
+var mcfly = require("$1");
+
+var ${2:_store} = ${3:[]};
+
+var ${4:ActionName} = mcfly.createStore({
+	
+	get: function () {
+		return $2;
+	}$5
+
+}, function (payload) {
+
+	switch (payload.actionType) {
+		
+		$6
+
+		default:
+			return true;
+
+	}
+
+	$4.emitChange();
+
+	return true;
+}
+
+module.exports = $4;
+endsnippet
+
+snippet rac "mcfly action skelton" b
+var mcfly = require("$1");
+
+var ${2:NameActions} = mcfly.createActions({
+
+	$3
+
+});
+
+module.exports = $2;
+endsnippet
+
+snippet rclass "React Class" b
+var ${1:ReactComponent} = React.createClass({
+
+	displayName: "$2",
+
+	propTypes: {
+		$3
+	},
+
+	render: function () {
+		return ${4:null};
+	}
+
+});
+
+module.exports = $1;
+endsnippet
+
+snippet rprop "React PropType" i
+React.PropTypes.$1
+endsnippet
+
+snippet rcomp "use a React component" i
+${1:ComponentName}(
+	{
+		$2
+	}, $3);
+endsnippet
+
+snippet rq "react component require" b
+var ${1:componentName} = React.createFactory(require("$2"));
+endsnippet
+
+snippet td "describe('', ...);" b
+describe("$1", function () {
+	$2;
+});
+endsnippet
+
+snippet rpt "React.PropTypes" b
+var rpt = React.PropTypes;
+endsnippet

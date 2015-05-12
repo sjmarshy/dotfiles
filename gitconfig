@@ -1,0 +1,8 @@
+[alias]
+	st = status
+	cmt = commit
+	d = diff
+[push]
+	default = simple
+[user]
+	email = sjmarshy@gmail.com

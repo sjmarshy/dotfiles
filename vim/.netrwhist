@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/Users/sammarshall/BTSync/wk/Projects/bitbucket/jcxdev/links'
+let g:netrw_dirhist_2='/Users/sammarshall/BTSync/wk/Projects/stash/tbd-associates/website-2015-design/proposal'
+let g:netrw_dirhist_3='/Users/sammarshall/BTSync/wk/Projects/stash/tbd-associates/website-2015-build/specs'
