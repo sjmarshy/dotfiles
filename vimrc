@@ -63,7 +63,7 @@ set title
 set relativenumber
 set numberwidth=3
 
-let mapleader=','
+let mapleader='\<Space>'
 
 set nohlsearch
 set incsearch
