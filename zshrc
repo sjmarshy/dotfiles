@@ -12,6 +12,8 @@ antigen apply
 
 alias g=git
 alias v='vim $(fzf)'
+alias tls='tmux list-sessions'
+alias tat='tmux attach-session -t'
 
 export EDITOR=vim
 export NVM_DIR="/Users/sam/.nvm"
