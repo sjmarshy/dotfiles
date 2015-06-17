@@ -17,8 +17,10 @@ export EDITOR=vim
 export NVM_DIR="/Users/sam/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-. `brew --prefix`/etc/profile.d/z.sh
+# . `brew --prefix`/etc/profile.d/z.sh
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+cd /var/www
