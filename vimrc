@@ -36,6 +36,8 @@ Plug 'maksimr/vim-jsbeautify'
 
 Plug 'vim-scripts/paredit.vim', { 'for': 'clojure' }
 
+Plug 'facebook/vim-flow', { 'for': 'javascript' }
+
 " Plug 'pangloss/vim-javascript'
 " Plug 'mgechev/vim-jsx' " requires pangloss/vim-javascript
 
