@@ -120,7 +120,7 @@ nmap <leader>b :CtrlPBuffer<cr>
 
 nmap <leader>u :GundoToggle<cr>
 
-let g:UltiSnipsExpandTrigger="<leader>s"
+let g:UltiSnipsExpandTrigger="<leader>;"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
