@@ -1,6 +1,6 @@
 call plug#begin('~/.vim/plugged')
 
-Plug 'junegunn/seoul256.vim' 
+Plug 'NLKNguyen/papercolor-theme' 
 Plug 'junegunn/rainbow_parentheses.vim', { 'for': 'clojure' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
 
@@ -38,12 +38,9 @@ Plug 'vim-scripts/paredit.vim', { 'for': 'clojure' }
 
 Plug 'facebook/vim-flow', { 'for': 'javascript' }
 
-" Plug 'pangloss/vim-javascript'
-" Plug 'mgechev/vim-jsx' " requires pangloss/vim-javascript
-
 call plug#end()
 
-colo seoul256-light " set our colorscheme
+colo PaperColor
 
 set nocompatible
 set t_Co=256
@@ -65,6 +62,7 @@ set title
 set relativenumber
 set numberwidth=3
 
+nnoremap <Space> <NOP>
 let mapleader="\<Space>"
 
 set nohlsearch
