@@ -36,8 +36,6 @@ Plug 'maksimr/vim-jsbeautify'
 
 Plug 'vim-scripts/paredit.vim', { 'for': 'clojure' }
 
-Plug 'facebook/vim-flow', { 'for': 'javascript' }
-
 call plug#end()
 
 colo PaperColor
