@@ -146,6 +146,4 @@ let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><CR>  pumvisible() ? neocomplete#close_popup() : "\<CR>"
 
-autocmd FileType javascript :set shiftwidth=4
-
 " vim:foldmethod=marker:foldlevel=0
