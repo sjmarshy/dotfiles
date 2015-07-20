@@ -38,6 +38,8 @@ Plug 'vim-scripts/paredit.vim', { 'for': 'clojure' }
 
 Plug 'wincent/terminus'
 
+Plug 'editorconfig/editorconfig-vim'
+
 call plug#end()
 
 colo PaperColor
