@@ -38,11 +38,15 @@ Plug 'airblade/vim-gitgutter'
 Plug 'stephpy/vim-yaml'
 Plug 'chase/vim-ansible-yaml'
 
-Plug 'maksimr/vim-jsbeautify'
+Plug 'maksimr/vim-jsbeautify', { 'for': 'javascript' }
 
 Plug 'wincent/terminus'
 
 Plug 'editorconfig/editorconfig-vim'
+Plug 'raichoo/purescript-vim'
+Plug 'haya14busa/vim-undoreplay'
+
+Plug 'kchmck/vim-coffee-script', { 'for': 'coffeescript' }
 
 call plug#end()
 
