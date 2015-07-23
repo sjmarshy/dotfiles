@@ -39,9 +39,6 @@ Plug 'wincent/terminus'
 
 Plug 'editorconfig/editorconfig-vim'
 
-" js
-Plug 'alarie/requirejs.vim', { 'for': 'javascript' }
-
 call plug#end()
 
 colo PaperColor
