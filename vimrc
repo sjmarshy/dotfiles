@@ -1,6 +1,6 @@
 call plug#begin('~/.vim/plugged')
 
-Plug 'NLKNguyen/papercolor-theme' 
+Plug 'NLKNguyen/papercolor-theme'
 Plug 'junegunn/rainbow_parentheses.vim', { 'for': 'clojure' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
 
@@ -15,6 +15,7 @@ Plug 'tpope/vim-sleuth'
 Plug 'Shougo/neocomplete.vim'
 
 Plug 'scrooloose/syntastic'
+Plug 'scrooloose/nerdtree'
 
 Plug 'sjl/gundo.vim'
 
@@ -39,6 +40,7 @@ Plug 'vim-scripts/paredit.vim', { 'for': 'clojure' }
 Plug 'wincent/terminus'
 
 Plug 'editorconfig/editorconfig-vim'
+
 
 call plug#end()
 
@@ -147,5 +149,8 @@ let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
 
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><CR>  pumvisible() ? neocomplete#close_popup() : "\<CR>"
+
+" nerdtree
+map <C-f> :NERDTreeToggle<CR>
 
 " vim:foldmethod=marker:foldlevel=0
