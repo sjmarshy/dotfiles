@@ -1,18 +1,20 @@
 call plug#begin('~/.vim/plugged')
 
-Plug 'NLKNguyen/papercolor-theme'
-Plug 'junegunn/rainbow_parentheses.vim', { 'for': 'clojure' }
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
-
 Plug 'tpope/vim-sensible'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
+Plug 'Shougo/neocomplete.vim'
+
 Plug 'tpope/vim-leiningen', { 'for': 'clojure' }
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' } " Clojure REPL
 Plug 'tpope/vim-classpath', { 'for': 'clojure' }
+Plug 'vim-scripts/paredit.vim', { 'for': 'clojure' }
+Plug 'junegunn/rainbow_parentheses.vim', { 'for': 'clojure' }
+
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-sleuth'
 
-Plug 'Shougo/neocomplete.vim'
 
 Plug 'scrooloose/syntastic'
 Plug 'scrooloose/nerdtree'
@@ -28,19 +30,17 @@ Plug 'honza/vim-snippets'
 
 Plug 'airblade/vim-gitgutter'
 
-Plug 'rking/ag.vim'
-
 Plug 'stephpy/vim-yaml'
 Plug 'chase/vim-ansible-yaml'
 
 Plug 'maksimr/vim-jsbeautify'
 
-Plug 'vim-scripts/paredit.vim', { 'for': 'clojure' }
-
 Plug 'wincent/terminus'
 
 Plug 'editorconfig/editorconfig-vim'
 
+" js
+Plug 'alarie/requirejs.vim', { 'for': 'javascript' }
 
 call plug#end()
 
