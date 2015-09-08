@@ -8,6 +8,7 @@ Plug 'Shougo/neocomplete.vim'
 Plug 'tpope/vim-leiningen', { 'for': 'clojure' }
 Plug 'tpope/vim-fireplace', { 'for': 'clojure' } " Clojure REPL
 Plug 'tpope/vim-classpath', { 'for': 'clojure' }
+Plug 'tpope/vim-salve', { 'for': 'clojure' }
 Plug 'vim-scripts/paredit.vim', { 'for': 'clojure' }
 Plug 'junegunn/rainbow_parentheses.vim', { 'for': 'clojure' }
 
