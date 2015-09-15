@@ -23,4 +23,6 @@ export NVM_DIR="/Users/sam/.nvm"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+export GOPATH=/Users/sam/go
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
