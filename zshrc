@@ -26,3 +26,5 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 export GOPATH=/Users/sam/go
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+source export_api_keys
