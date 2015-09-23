@@ -10,3 +10,7 @@
 [user]
 	email = sjmarshy@gmail.com
 	name = Sam
+[diff]
+	tool = meld
+[merge]
+	tool = meld

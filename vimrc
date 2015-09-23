@@ -48,6 +48,8 @@ Plug 'haya14busa/vim-undoreplay'
 
 Plug 'kchmck/vim-coffee-script', { 'for': 'coffeescript' }
 
+Plug 'mattn/emmet-vim'
+
 call plug#end()
 
 colo PaperColor
@@ -83,9 +85,7 @@ set gdefault
 set showmatch
 set matchtime=1
 
-set wrap
-set textwidth=80
-set colorcolumn=80
+set colorcolumn=100
 set cursorline
 
 set scrolloff=10
