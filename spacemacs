@@ -23,6 +23,7 @@
      git
      markdown
      org
+     emoji
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)

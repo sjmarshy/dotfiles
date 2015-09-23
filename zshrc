@@ -25,3 +25,5 @@ export NVM_DIR="/Users/sam/.nvm"
 
 cd /var/www
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+source export_api_keys

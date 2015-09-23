@@ -294,6 +294,9 @@ Can be installed with `brew install trash'."
   (remove-hook 'kill-buffer-query-functions 'server-kill-buffer-query-function))
 (add-hook 'server-visit-hook 'server-remove-kill-buffer-hook)
 
+(setq org-todo-keywords
+      '((sequence "TODO" "DOING" "|" "DONE" "WAITING" "WONTFIX")))
+
 ;; The following code is kept as reference -----------------------------------
 
 ;; ;; save a bunch of variables to the desktop file

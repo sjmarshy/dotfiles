@@ -164,10 +164,10 @@ S.bind(bindMod1("j"), S.op("move", presets.bottom_half));
 S.bind(bindMod1("k"), S.op("move", presets.top_half));
 S.bind(bindMod1("l"), S.op("move", presets.right_half));
 
-S.bind(bindMod1("u"), S.op("move", presets.top_left_quarter));
-S.bind(bindMod1("i"), S.op("move", presets.top_right_quarter));
-S.bind(bindMod1("n"), S.op("move", presets.bottom_left_quarter));
-S.bind(bindMod1("m"), S.op("move", presets.bottom_right_quarter));
+S.bind(bindMod1("y"), S.op("move", presets.top_left_quarter));
+S.bind(bindMod1("u"), S.op("move", presets.top_right_quarter));
+S.bind(bindMod1("b"), S.op("move", presets.bottom_left_quarter));
+S.bind(bindMod1("n"), S.op("move", presets.bottom_right_quarter));
 
 S.bind(bindMod2("h"), nudge.left);
 S.bind(bindMod2("j"), nudge.down);
@@ -176,6 +176,7 @@ S.bind(bindMod2("l"), nudge.right);
 
 S.on("windowOpened", function(event, win) {
 
+  /*
     switch (win.app().name()) {
         case "Mischief":
         case "Steam":
@@ -183,4 +184,5 @@ S.on("windowOpened", function(event, win) {
     }
 
     win.move(presets.fullscreen);
+    */
 });

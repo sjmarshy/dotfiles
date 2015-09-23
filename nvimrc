@@ -1,67 +1,29 @@
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.nvim/plugged')
 
-Plug 'tpope/vim-sensible'
 Plug 'NLKNguyen/papercolor-theme'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
+
 Plug 'Shougo/neocomplete.vim'
 
-Plug 'tpope/vim-leiningen', { 'for': 'clojure' }
-Plug 'tpope/vim-projectionist', { 'for': 'clojure' }
-Plug 'tpope/vim-dispatch', { 'for': 'clojure' }
-Plug 'tpope/vim-fireplace', { 'for': 'clojure' } " Clojure REPL
-Plug 'tpope/vim-classpath', { 'for': 'clojure' }
-Plug 'tpope/vim-salve', { 'for': 'clojure' }
-Plug 'vim-scripts/paredit.vim', { 'for': 'clojure' }
-Plug 'junegunn/rainbow_parentheses.vim', { 'for': 'clojure' }
-
-Plug 'zyedidia/literate.vim'
-
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-sleuth'
-
-
 Plug 'scrooloose/syntastic'
-Plug 'scrooloose/nerdtree'
-
-Plug 'sjl/gundo.vim'
-
-Plug 'moll/vim-bbye'
 
 Plug 'kien/ctrlp.vim'
 
 Plug 'sirver/ultisnips'
+
 Plug 'honza/vim-snippets'
 
-Plug 'airblade/vim-gitgutter'
-
-Plug 'stephpy/vim-yaml'
-Plug 'chase/vim-ansible-yaml'
-
-Plug 'maksimr/vim-jsbeautify', { 'for': 'javascript' }
-
-Plug 'wincent/terminus'
-
 Plug 'editorconfig/editorconfig-vim'
-Plug 'raichoo/purescript-vim'
-Plug 'haya14busa/vim-undoreplay'
-
-Plug 'kchmck/vim-coffee-script', { 'for': 'coffeescript' }
-
-Plug 'mattn/emmet-vim'
 
 call plug#end()
 
 colo PaperColor
 
-set nocompatible
-set t_Co=256
-set ttyfast
+set backspace=2 " normal backspace usage
+
 set encoding=utf-8
-set hidden
+
 set nobackup
 set nowritebackup
-set backspace=2 " normal backspace usage
 
 set ruler
 set showcmd
@@ -85,10 +47,11 @@ set gdefault
 set showmatch
 set matchtime=1
 
-set colorcolumn=100
+set wrap
+set colorcolumn=80
 set cursorline
 
-set scrolloff=10
+set scrolloff=20
 
 set visualbell
 
@@ -121,12 +84,8 @@ vnoremap L $
 
 nnoremap <leader>sv :so $MYVIMRC<cr>
 
-nmap <leader>() :RainbowParentheses!!<cr>
-
 nmap <leader>e :CtrlP<cr>
 nmap <leader>b :CtrlPBuffer<cr>
-
-nmap <leader>u :GundoToggle<cr>
 
 let g:UltiSnipsExpandTrigger="<leader>;"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
@@ -142,10 +101,6 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_javascript_eslint_exec = 'eslint_d' 
-
-" autocmd BufWritePre *.js   :call JsBeautify()
-" autocmd BufWritePre *.html :call HtmlBeautify()
 
 " neocomplete
 let g:acp_enableAtStartup = 0
@@ -157,7 +112,3 @@ let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><CR>  pumvisible() ? neocomplete#close_popup() : "\<CR>"
 
-" nerdtree
-map <C-f> :NERDTreeToggle<CR>
-
-" vim:foldmethod=marker:foldlevel=0
