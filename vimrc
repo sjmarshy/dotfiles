@@ -39,6 +39,7 @@ Plug 'stephpy/vim-yaml'
 Plug 'chase/vim-ansible-yaml'
 
 Plug 'maksimr/vim-jsbeautify', { 'for': 'javascript' }
+Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 
 Plug 'wincent/terminus'
 
@@ -49,6 +50,8 @@ Plug 'haya14busa/vim-undoreplay'
 Plug 'kchmck/vim-coffee-script', { 'for': 'coffeescript' }
 
 Plug 'mattn/emmet-vim'
+
+Plug 'xsbeats/vim-blade'
 
 call plug#end()
 
@@ -142,7 +145,7 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_javascript_eslint_exec = 'eslint_d' 
+let g:syntastic_javascript_eslint_exec = 'eslint_d'
 
 " autocmd BufWritePre *.js   :call JsBeautify()
 " autocmd BufWritePre *.html :call HtmlBeautify()
@@ -159,5 +162,9 @@ inoremap <expr><CR>  pumvisible() ? neocomplete#close_popup() : "\<CR>"
 
 " nerdtree
 map <C-f> :NERDTreeToggle<CR>
+
+" vim-javascript
+let b:javascript_fold = 1
+
 
 " vim:foldmethod=marker:foldlevel=0
