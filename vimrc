@@ -14,12 +14,9 @@ Plug 'tpope/vim-salve', { 'for': 'clojure' }
 Plug 'vim-scripts/paredit.vim', { 'for': 'clojure' }
 Plug 'junegunn/rainbow_parentheses.vim', { 'for': 'clojure' }
 
-Plug 'zyedidia/literate.vim'
-
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-sleuth'
-
 
 Plug 'scrooloose/syntastic'
 Plug 'scrooloose/nerdtree'
@@ -38,12 +35,10 @@ Plug 'airblade/vim-gitgutter'
 Plug 'stephpy/vim-yaml'
 Plug 'chase/vim-ansible-yaml'
 
-Plug 'maksimr/vim-jsbeautify', { 'for': 'javascript' }
-Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
-
 Plug 'wincent/terminus'
 
 Plug 'editorconfig/editorconfig-vim'
+
 Plug 'raichoo/purescript-vim'
 Plug 'haya14busa/vim-undoreplay'
 
@@ -98,7 +93,6 @@ set visualbell
 set laststatus=2
 
 filetype on
-filetype plugin on
 filetype plugin indent on
 syntax enable
 
@@ -139,16 +133,10 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsEditSplit="vertical"
 
 " syntastic
-
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_javascript_eslint_exec = 'eslint_d'
-
-" autocmd BufWritePre *.js   :call JsBeautify()
-" autocmd BufWritePre *.html :call HtmlBeautify()
 
 " neocomplete
 let g:acp_enableAtStartup = 0
@@ -163,8 +151,8 @@ inoremap <expr><CR>  pumvisible() ? neocomplete#close_popup() : "\<CR>"
 " nerdtree
 map <C-f> :NERDTreeToggle<CR>
 
-" vim-javascript
-let b:javascript_fold = 1
-
+" editorconfig
+let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+let g:EditorConfig_exec_path = '/usr/local/bin/editorconfig'
 
 " vim:foldmethod=marker:foldlevel=0
