@@ -47,6 +47,9 @@ Plug 'kchmck/vim-coffee-script', { 'for': 'coffeescript' }
 Plug 'mattn/emmet-vim'
 
 Plug 'xsbeats/vim-blade'
+Plug 'fatih/vim-go'
+Plug 'majutsushi/tagbar'
+Plug 'garyburd/go-explorer'
 
 call plug#end()
 
