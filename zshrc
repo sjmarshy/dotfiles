@@ -23,7 +23,10 @@ export NVM_DIR="/Users/sam/.nvm"
 
 # . `brew --prefix`/etc/profile.d/z.sh
 
-cd /var/www
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:/Users/sam/go/bin:$PATH"
+export GOPATH=/Users/sam/go
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-source export_api_keys
+source ~/.dotfiles/export_api_keys
