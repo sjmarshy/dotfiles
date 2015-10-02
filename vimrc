@@ -95,6 +95,9 @@ set visualbell
 
 set laststatus=2
 
+set shiftwidth=2
+set expandtab
+
 filetype on
 filetype plugin indent on
 syntax enable
@@ -140,6 +143,9 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+let b:javascript_fold = 1
+let g:syntastic_javascript_checkers = ['eslint']
 
 " neocomplete
 let g:acp_enableAtStartup = 0
