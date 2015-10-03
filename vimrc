@@ -51,6 +51,8 @@ Plug 'fatih/vim-go'
 Plug 'majutsushi/tagbar'
 Plug 'garyburd/go-explorer'
 
+Plug 'udalov/kotlin-vim'
+
 call plug#end()
 
 colo PaperColor
