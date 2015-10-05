@@ -51,6 +51,8 @@ Plug 'fatih/vim-go'
 Plug 'majutsushi/tagbar'
 Plug 'garyburd/go-explorer'
 
+Plug 'udalov/kotlin-vim'
+
 call plug#end()
 
 colo PaperColor
@@ -96,6 +98,9 @@ set scrolloff=10
 set visualbell
 
 set laststatus=2
+
+set shiftwidth=2
+set expandtab
 
 filetype on
 filetype plugin indent on
