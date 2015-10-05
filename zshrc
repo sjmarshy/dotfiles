@@ -6,7 +6,7 @@ antigen bundle git
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle ssh-agent
 
-antigen theme arrow
+antigen theme aussiegeek
 
 antigen apply
 
