@@ -18,7 +18,7 @@ alias tat='tmux attach-session -t'
 alias gvr='git push origin master --tags && git push origin develop'
 
 export EDITOR=vim
-export NVM_DIR="/Users/sam/.nvm"
+export NVM_DIR="/home/vagrant/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # . `brew --prefix`/etc/profile.d/z.sh
@@ -30,3 +30,5 @@ export GOPATH=/Users/sam/go
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 source ~/.dotfiles/export_api_keys
+
+echo "hi"
