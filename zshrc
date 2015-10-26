@@ -10,7 +10,6 @@ antigen theme aussiegeek
 
 antigen apply
 
-
 alias g=git
 alias v='vim $(fzf)'
 alias tls='tmux list-sessions'

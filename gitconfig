@@ -12,6 +12,10 @@
 	email = sjmarshy@gmail.com
 	name = Sam
 [diff]
-	tool = meld
+	tool = delta
 [merge]
 	tool = meld
+[difftool]
+	prompt = false
+[difftool "delta"]
+	cmd = delta \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
