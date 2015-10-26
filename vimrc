@@ -48,10 +48,12 @@ Plug 'mattn/emmet-vim'
 
 Plug 'xsbeats/vim-blade'
 Plug 'fatih/vim-go'
-Plug 'majutsushi/tagbar'
 Plug 'garyburd/go-explorer'
+Plug 'majutsushi/tagbar'
 
 Plug 'udalov/kotlin-vim'
+
+Plug 'christoomey/vim-sort-motion'
 
 call plug#end()
 
@@ -75,7 +77,8 @@ set modelines=1
 set title
 
 set relativenumber
-set numberwidth=3
+set number
+set numberwidth=2
 
 nnoremap <Space> <NOP>
 let mapleader="\<Space>"
@@ -165,5 +168,3 @@ map <C-f> :NERDTreeToggle<CR>
 " editorconfig
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 let g:EditorConfig_exec_path = '/usr/local/bin/editorconfig'
-
-" vim:foldmethod=marker:foldlevel=0
