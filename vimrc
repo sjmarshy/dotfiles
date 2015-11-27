@@ -54,6 +54,7 @@ Plug 'majutsushi/tagbar'
 Plug 'udalov/kotlin-vim'
 
 Plug 'christoomey/vim-sort-motion'
+Plug 'vim-scripts/c.vim'
 
 call plug#end()
 
