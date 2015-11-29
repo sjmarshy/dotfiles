@@ -56,6 +56,8 @@ Plug 'udalov/kotlin-vim'
 Plug 'christoomey/vim-sort-motion'
 Plug 'vim-scripts/c.vim'
 
+Plug 'ternjs/tern_for_vim'
+
 call plug#end()
 
 colo PaperColor
@@ -169,3 +171,7 @@ map <C-f> :NERDTreeToggle<CR>
 " editorconfig
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 let g:EditorConfig_exec_path = '/usr/local/bin/editorconfig'
+
+" tern
+let g:neocomplete#force_omni_input_patterns.javascript = '[^. \t]\.\w*'
+autocmd FileType javascript setlocal omnifunc=tern#Complete
