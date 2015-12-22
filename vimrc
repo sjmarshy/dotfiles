@@ -58,6 +58,8 @@ Plug 'vim-scripts/c.vim'
 
 Plug 'ternjs/tern_for_vim'
 
+Plug 'mustache/vim-mustache-handlebars'
+
 call plug#end()
 
 colo PaperColor

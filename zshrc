@@ -28,3 +28,5 @@ export GOPATH=/Users/sam/go
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 source ~/.dotfiles/export_api_keys
+# Hook for desk activation
+[ -n "$DESK_ENV" ] && source "$DESK_ENV"
