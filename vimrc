@@ -105,7 +105,7 @@ set visualbell
 
 set laststatus=2
 
-set shiftwidth=2
+set shiftwidth=4
 set expandtab
 
 filetype on
@@ -155,7 +155,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 let b:javascript_fold = 1
-let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_checkers = ['eslint', 'flow']
 
 " neocomplete
 let g:acp_enableAtStartup = 0
@@ -174,6 +174,9 @@ map <C-f> :NERDTreeToggle<CR>
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 let g:EditorConfig_exec_path = '/usr/local/bin/editorconfig'
 
+if !exists('g:neocomplete#force_omni_input_patterns')
+        let g:neocomplete#force_omni_input_patterns = {}
+endif
 " tern
 let g:neocomplete#force_omni_input_patterns.javascript = '[^. \t]\.\w*'
 autocmd FileType javascript setlocal omnifunc=tern#Complete
