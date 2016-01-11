@@ -60,6 +60,10 @@ Plug 'ternjs/tern_for_vim'
 
 Plug 'mustache/vim-mustache-handlebars'
 
+Plug 'fmoralesc/vim-pad'
+
+Plug 'justinmk/vim-sneak'
+
 call plug#end()
 
 colo PaperColor
@@ -180,3 +184,6 @@ endif
 " tern
 let g:neocomplete#force_omni_input_patterns.javascript = '[^. \t]\.\w*'
 autocmd FileType javascript setlocal omnifunc=tern#Complete
+
+" vim-pad
+let g:pad#dir = '~/.notes'
