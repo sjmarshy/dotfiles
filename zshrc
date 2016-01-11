@@ -6,7 +6,7 @@ antigen bundle git
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle ssh-agent
 
-antigen theme aussiegeek
+antigen theme ys
 
 antigen apply
 
@@ -15,6 +15,7 @@ alias v='vim $(fzf)'
 alias tls='tmux list-sessions'
 alias tat='tmux attach-session -t'
 alias gvr='git push origin master --tags && git push origin develop'
+alias art='php artisan'
 
 export EDITOR=vim
 export NVM_DIR="/home/vagrant/.nvm"
@@ -23,11 +24,9 @@ export NVM_DIR="/home/vagrant/.nvm"
 # . `brew --prefix`/etc/profile.d/z.sh
 
 ### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:/Users/sam/go/bin:$PATH"
+export PATH="/usr/local/heroku/bin:/Users/sam/go/bin:home/vagrant/.composer/vendor/bin:$PATH"
 export GOPATH=/Users/sam/go
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 source ~/.dotfiles/export_api_keys
-
-echo "hi"
