@@ -65,6 +65,7 @@ Plug 'fmoralesc/vim-pad'
 Plug 'justinmk/vim-sneak'
 
 Plug 'mhinz/vim-startify'
+Plug 'daveyarwood/vim-alda'
 
 call plug#end()
 
@@ -184,6 +185,9 @@ if !exists('g:neocomplete#force_omni_input_patterns')
         let g:neocomplete#force_omni_input_patterns = {}
 endif
 " tern
+if !exists('g:neocomplete#force_omni_input_patterns')
+  let g:neocomplete#force_omni_input_patterns = {}
+endif
 let g:neocomplete#force_omni_input_patterns.javascript = '[^. \t]\.\w*'
 autocmd FileType javascript setlocal omnifunc=tern#Complete
 
