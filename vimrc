@@ -64,6 +64,8 @@ Plug 'fmoralesc/vim-pad'
 
 Plug 'justinmk/vim-sneak'
 
+Plug 'mhinz/vim-startify'
+
 call plug#end()
 
 colo PaperColor
