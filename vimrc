@@ -6,17 +6,10 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
 Plug 'Shougo/neocomplete.vim'
 
 Plug 'tpope/vim-leiningen', { 'for': 'clojure' }
-Plug 'tpope/vim-projectionist', { 'for': 'clojure' }
-Plug 'tpope/vim-dispatch', { 'for': 'clojure' }
-Plug 'tpope/vim-fireplace', { 'for': 'clojure' } " Clojure REPL
-Plug 'tpope/vim-classpath', { 'for': 'clojure' }
-Plug 'tpope/vim-salve', { 'for': 'clojure' }
-Plug 'vim-scripts/paredit.vim', { 'for': 'clojure' }
+Plug 'bhurlow/vim-parinfer', { 'for': 'clojure' }
 Plug 'junegunn/rainbow_parentheses.vim', { 'for': 'clojure' }
 
 Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-sleuth'
 
 Plug 'scrooloose/syntastic'
 Plug 'scrooloose/nerdtree'
@@ -66,6 +59,7 @@ Plug 'justinmk/vim-sneak'
 
 Plug 'mhinz/vim-startify'
 Plug 'daveyarwood/vim-alda'
+Plug 'lambdatoast/elm.vim'
 
 call plug#end()
 
