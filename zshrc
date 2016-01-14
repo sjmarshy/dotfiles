@@ -10,10 +10,21 @@ antigen theme nanotech
 antigen apply
 
 
+# git
 alias g=git
+
+# vim
 alias v='vim $(fzf)'
+
+# tmux
 alias tls='tmux list-sessions'
 alias tat='tmux attach-session -t'
+
+# npm
+alias ni='npm install'
+alias ns='npm install --save'
+alias nd='npm install --save-dev'
+alias ng='npm install --global'
 
 export EDITOR=vim
 export NVM_DIR="/Users/sam/.nvm"
@@ -22,7 +33,7 @@ export NVM_DIR="/Users/sam/.nvm"
 . `brew --prefix`/etc/profile.d/z.sh
 
 ### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:/Users/sam/go/bin:$PATH"
+export PATH="/usr/local/heroku/bin:/Users/sam/go/bin:/Users/sam/Scripts:$PATH"
 export GOPATH=/Users/sam/go
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -30,3 +41,24 @@ export GOPATH=/Users/sam/go
 source ~/.dotfiles/export_api_keys
 # Hook for desk activation
 [ -n "$DESK_ENV" ] && source "$DESK_ENV"
+
+HISTSIZE=10000
+SAVEHIST=10000
+
+export HISTBACKUP=~/.history-backup/history
+
+exportHistory() {
+
+  FILESIZE=`cat $HISTFILE | wc -l`
+  HISTANALYSISFILE=~/.history-backup/analysis
+
+  if [[ $FILESIZE -gt $((9000)) ]]; then
+
+    touch $HISTBACKUP
+    cat $HISTFILE >> $HISTBACKUP
+    analyseHistory > $HISTANALYSISFILE
+    echo "zsh history backed up"
+  fi
+}
+
+exportHistory
