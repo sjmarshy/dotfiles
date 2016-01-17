@@ -57,6 +57,7 @@ exportHistory() {
     touch $HISTBACKUP
     cat $HISTFILE >> $HISTBACKUP
     analyseHistory > $HISTANALYSISFILE
+    rm $HISTFILE
     echo "zsh history backed up"
   fi
 }
