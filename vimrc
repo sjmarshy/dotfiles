@@ -59,7 +59,8 @@ Plug 'justinmk/vim-sneak'
 
 Plug 'mhinz/vim-startify'
 Plug 'daveyarwood/vim-alda'
-Plug 'lambdatoast/elm.vim'
+
+Plug 'elmcast/elm-vim'
 
 call plug#end()
 
@@ -187,3 +188,6 @@ autocmd FileType javascript setlocal omnifunc=tern#Complete
 
 " vim-pad
 let g:pad#dir = '~/.notes'
+
+" elm
+autocmd BufWritePost *.elm silent execute "!elm-format --yes %" | edit! | set filetype=elm
