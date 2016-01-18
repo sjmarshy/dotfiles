@@ -189,5 +189,3 @@ autocmd FileType javascript setlocal omnifunc=tern#Complete
 " vim-pad
 let g:pad#dir = '~/.notes'
 
-" elm
-autocmd BufWritePost *.elm silent execute "!elm-format --yes %" | edit! | set filetype=elm
