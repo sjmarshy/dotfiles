@@ -45,6 +45,16 @@ source ~/.dotfiles/export_api_keys
 HISTSIZE=10000
 SAVEHIST=10000
 
+vagrantwork() {
+
+  cd ~/vagrant-environment && ./work.zsh
+}
+
+vagranthome() {
+
+  cd ~/vagrant-environment && ./home.zsh
+}
+
 export HISTBACKUP=~/.history-backup/history
 
 exportHistory() {
