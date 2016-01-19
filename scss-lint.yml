@@ -1,0 +1,3 @@
+linters:
+  MergeableSelector:
+    enabled: false
