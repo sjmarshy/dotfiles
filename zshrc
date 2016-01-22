@@ -19,6 +19,7 @@ alias v='vim $(fzf)'
 # tmux
 alias tls='tmux list-sessions'
 alias tat='tmux attach-session -t'
+alias trm='tmux kill-session -t'
 
 # npm
 alias ni='npm install'
