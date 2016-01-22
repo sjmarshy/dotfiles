@@ -27,6 +27,29 @@ alias ns='npm install --save'
 alias nd='npm install --save-dev'
 alias ng='npm install --global'
 
+# taskwarrior
+#
+# add a task with a particular project set
+taskaddwithproject() {
+  task add pro:$1 $2
+}
+
+taskdelete() {
+  task $1 delete
+}
+
+taskdone() {
+  task $1 done
+}
+
+alias t='task'
+alias ta='task add'
+alias tp='taskaddwithproject'
+alias trm='taskdelete'
+alias td='taskdone'
+
+
+
 export EDITOR=vim
 export NVM_DIR="/Users/sam/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
