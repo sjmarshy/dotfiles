@@ -185,4 +185,3 @@ autocmd FileType javascript setlocal omnifunc=tern#Complete
 
 " vim-pad
 let g:pad#dir = '~/.notes'
-
