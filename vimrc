@@ -5,6 +5,8 @@ Plug 'NLKNguyen/papercolor-theme'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
 Plug 'Shougo/neocomplete.vim'
 
+Plug 'tpope/vim-abolish'
+
 Plug 'tpope/vim-leiningen', { 'for': 'clojure' }
 Plug 'bhurlow/vim-parinfer', { 'for': 'clojure' }
 Plug 'junegunn/rainbow_parentheses.vim', { 'for': 'clojure' }
