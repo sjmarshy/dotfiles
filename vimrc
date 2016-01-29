@@ -64,6 +64,10 @@ Plug 'daveyarwood/vim-alda'
 
 Plug 'elmcast/elm-vim'
 
+Plug 'jelera/vim-javascript-syntax', { 'for': 'javascript' }
+Plug 'vim-scripts/JavaScript-Indent', { 'for': 'javascript' }
+Plug 'othree/javascript-libraries-syntax.vim', { 'for': 'javascript' }
+
 call plug#end()
 
 colo PaperColor
