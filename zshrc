@@ -59,7 +59,6 @@ export NVM_DIR="/Users/sam/.nvm"
 export PATH="/usr/local/heroku/bin:/Users/sam/go/bin:/Users/sam/Scripts:$PATH"
 export GOPATH=/Users/sam/go
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 source ~/.dotfiles/export_api_keys
 # Hook for desk activation
@@ -78,6 +77,8 @@ vagranthome() {
   cd ~/vagrant-environment && ./home.zsh
 }
 
+### zsh history back-up
+
 export HISTBACKUP=~/.history-backup/history
 
 exportHistory() {
@@ -95,7 +96,10 @@ exportHistory() {
   fi
 }
 
+exportHistory
+
 ### vim mode
+#
 bindkey -v
 export KEYTIMEOUT=1
 
@@ -104,7 +108,6 @@ bindkey '^N' down-history
 bindkey '^?' backward-delete-char
 bindkey '^h' backward-delete-char
 bindkey '^w' backward-kill-word
-bindkey '^r' history-incremental-search-backward
 
 function zle-line-init zle-keymap-select {
     VIM_PROMPT="%{$fg_bold[yellow]%} [% NORMAL]%  %{$reset_color%}"
@@ -115,4 +118,5 @@ function zle-line-init zle-keymap-select {
 zle -N zle-line-init
 zle -N zle-keymap-select
 
-exportHistory
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
