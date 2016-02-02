@@ -68,6 +68,8 @@ Plug 'jelera/vim-javascript-syntax', { 'for': 'javascript' }
 Plug 'vim-scripts/JavaScript-Indent', { 'for': 'javascript' }
 Plug 'othree/javascript-libraries-syntax.vim', { 'for': 'javascript' }
 
+Plug 'Raimondi/delimitMate'
+
 call plug#end()
 
 colo PaperColor
@@ -191,3 +193,9 @@ autocmd FileType javascript setlocal omnifunc=tern#Complete
 
 " vim-pad
 let g:pad#dir = '~/.notes'
+
+" ctrl-p
+let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
+if executable('ag')
+  let g:ctrlp_user_command = 'ag %s -l --ignore node_modules --nocolor -g ""'
+endif
