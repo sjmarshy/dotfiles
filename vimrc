@@ -5,6 +5,8 @@ Plug 'NLKNguyen/papercolor-theme'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
 Plug 'Shougo/neocomplete.vim'
 
+Plug 'tpope/vim-abolish'
+
 Plug 'tpope/vim-leiningen', { 'for': 'clojure' }
 Plug 'bhurlow/vim-parinfer', { 'for': 'clojure' }
 Plug 'junegunn/rainbow_parentheses.vim', { 'for': 'clojure' }
@@ -61,6 +63,12 @@ Plug 'mhinz/vim-startify'
 Plug 'daveyarwood/vim-alda'
 
 Plug 'elmcast/elm-vim'
+
+Plug 'jelera/vim-javascript-syntax', { 'for': 'javascript' }
+Plug 'vim-scripts/JavaScript-Indent', { 'for': 'javascript' }
+Plug 'othree/javascript-libraries-syntax.vim', { 'for': 'javascript' }
+
+Plug 'Raimondi/delimitMate'
 
 call plug#end()
 
@@ -177,9 +185,6 @@ map <C-f> :NERDTreeToggle<CR>
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 let g:EditorConfig_exec_path = '/usr/local/bin/editorconfig'
 
-if !exists('g:neocomplete#force_omni_input_patterns')
-        let g:neocomplete#force_omni_input_patterns = {}
-endif
 " tern
 if !exists('g:neocomplete#force_omni_input_patterns')
   let g:neocomplete#force_omni_input_patterns = {}
@@ -190,3 +195,8 @@ autocmd FileType javascript setlocal omnifunc=tern#Complete
 " vim-pad
 let g:pad#dir = '~/.notes'
 
+" ctrl-p
+let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
+if executable('ag')
+  let g:ctrlp_user_command = 'ag %s -l --ignore node_modules --nocolor -g ""'
+endif

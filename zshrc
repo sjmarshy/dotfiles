@@ -5,6 +5,10 @@ antigen use oh-my-zsh
 antigen bundle git
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle ssh-agent
+antigen bundle djui/alias-tips
+antigen bundle unixorn/autoupdate-antigen.zshplugin
+antigen bundle uvaes/fzf-marks
+antigen bundle b4b4r07/enhancd
 
 antigen theme ys
 
@@ -21,12 +25,35 @@ alias tls='tmux list-sessions'
 alias tat='tmux attach-session -t'
 alias gvr='git push origin master --tags && git push origin develop'
 alias art='php artisan'
+alias trm='tmux kill-session -t'
 
 # npm
 alias ni='npm install'
 alias ns='npm install --save'
 alias nd='npm install --save-dev'
 alias ng='npm install --global'
+
+# taskwarrior
+
+# add a task with a particular project set
+taskaddwithproject() {
+  task add pro:$1 $2
+}
+
+taskdelete() {
+  task $1 delete
+}
+
+taskdone() {
+  task $1 done
+}
+
+alias t='task'
+alias ta='task add'
+alias tp='taskaddwithproject'
+alias trm='taskdelete'
+alias td='taskdone'
+alias ts='task sync'
 
 export EDITOR=vim
 export NVM_DIR="/home/vagrant/.nvm"
@@ -38,7 +65,6 @@ export NVM_DIR="/home/vagrant/.nvm"
 export PATH="/usr/local/heroku/bin:/Users/sam/go/bin:home/vagrant/.composer/vendor/bin:$PATH"
 export GOPATH=/Users/sam/go
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 source ~/.dotfiles/export_api_keys
 # Hook for desk activation
@@ -46,6 +72,18 @@ source ~/.dotfiles/export_api_keys
 
 HISTSIZE=10000
 SAVEHIST=10000
+
+vagrantwork() {
+
+  cd ~/vagrant-environment && ./work.zsh
+}
+
+vagranthome() {
+
+  cd ~/vagrant-environment && ./home.zsh
+}
+
+### zsh history back-up
 
 export HISTBACKUP=~/.history-backup/history
 
@@ -65,3 +103,28 @@ exportHistory() {
 }
 
 exportHistory
+
+### vim mode
+#
+bindkey -v
+export KEYTIMEOUT=1
+
+bindkey '^P' up-history
+bindkey '^N' down-history
+bindkey '^?' backward-delete-char
+bindkey '^h' backward-delete-char
+bindkey '^w' backward-kill-word
+
+function zle-line-init zle-keymap-select {
+    VIM_PROMPT="%{$fg_bold[yellow]%} [% NORMAL]%  %{$reset_color%}"
+    RPS1="${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/} $EPS1"
+    zle reset-prompt
+}
+
+zle -N zle-line-init
+zle -N zle-keymap-select
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+### enhancd
+export ENHANCD_FILTER=fzf
