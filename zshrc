@@ -4,11 +4,14 @@ antigen use oh-my-zsh
 
 antigen bundle git
 antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle djui/alias-tips
+antigen bundle unixorn/autoupdate-antigen.zshplugin
+antigen bundle uvaes/fzf-marks
+antigen bundle b4b4r07/enhancd
 
 antigen theme nanotech
 
 antigen apply
-
 
 # git
 alias g=git
@@ -120,3 +123,5 @@ zle -N zle-keymap-select
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+### enhancd
+export ENHANCD_FILTER=fzf
